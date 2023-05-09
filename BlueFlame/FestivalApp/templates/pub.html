@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% comment %} <link rel="stylesheet" href="{% static 'css/default.css' %}"> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/default.css' %}">
     <link rel="stylesheet" href="{% static 'css/booth2.css' %}">
     <title>{{pub.name}}</title>
 </head>
@@ -16,32 +16,50 @@
         <p class="track-text">{{pub.belong}}</p>
         <p class="drink-text">{{pub.name}}</p>
         {% comment %} <img class ="image" src="{{pub.image.url}}" alt="이미지 설명"> {% endcomment %}
-        <p class="ss-text">
-            {{pub.content}}
-        </p>
-        <p class="INSTA">
-            INSTA : {{pub.contact}}
-        </p>
+        <div class="upper-section">
+            <p class="ss-text">
+                {{pub.content}}
+            </p>
+        </div>
+        <div class="lower-section">
+            <p class="INSTA">
+            CONTACT : {{pub.contact}}
+            </p>
+        </div>
     </div>
-
-    <div class="div2">
+    <div class="upper-section">
         <p class="menu-text">메뉴</p>
-        {% for menu in pub.menu_set.all %}
-            <p class="l1-menu">황도</p>
-            <hr class="line-menu">
-            <p class="r1-menu">₩ 3000</p>
-        {% endfor %}
-
+                {%for menu in pub.menu_set.all%}
+                    <div class="div2">
+                        <p class="l1-menu">{{menu.name}}</p>
+                        <hr class="line-menu">
+                        <p class="r1-menu"> {{menu.price}}</p>
+                    </div>
+                {%endfor%}
     </div>
 
-    <div class="div3">
-        <p class="place-title">장소</p>
-        <p class="place">{{pub.location}}</p>
-        <img class ="image-place" src="{% static 'image/a.jpg' %}" alt="">
+    <div class="lower-section">
+        <div class="div3">
+            <p class="place-title">장소</p>
+            <p class="place">{{pub.location}}</p>
+            
 
 
+        </div>
+        <img class ="image-place" src="{% static 'img/test2.jpg' %}" alt="">
     </div>
     
 </body>
 
+<footer style="background-color: #151937;">
+    <p style="color: #92AAFFCC; font-weight: 700;">Contact</p>
+    <div style="margin-top: 9px;">
+        <p>Instagram</p>
+        <p>@likelion_hansung</p>
+    </div>
+    <div style="margin-top: 6px;">
+        <p>Kakaotalk</p>
+        <p>한성대학교 멋쟁이사자처럼</p>
+    </div>
+</footer>
 </html>

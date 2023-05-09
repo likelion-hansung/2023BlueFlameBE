@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,27 +15,43 @@
     <div class="title">
         <p class="track-text">{{club.belong}}</p>
         <p class="drink-text">{{club.name}}</p>
-        <img class ="image" src="{{club.image.url}}" alt="이미지 설명">
-        <p class="ss-text">
-            {{club.content}}
-        </p>
-        <p class="ss-text">
-            {{club.information}}
-        </p>
-        <p class="ss-text">
-            INSTA: {{club.contact}}
+        <img class ="image" src="../img/test.jpg" alt="이미지 설명">
+        <div class="upper-section">
+            <p class="ss-text">
+                {{club.content}}
+            </p>
+        </div>
+        <div class="lower-section">
+            <p class="ss-text">
+                {{club.information}}
+            </p>
+        </div>
+    </div>
+    <div class="upper-section">
+        <p class="INSTA">
+            CONTACT : {{club.contact}}
         </p>
     </div>
 
-
-    <div class="div3">
-        <p class="place-title">장소</p>
-        <p class="place">{{club.location}}</p>
-        <img class ="image-place" src="{% static 'image/a.jpg' %}" alt="">
-
-
+    <div class="lower-section">
+        <div class="div3">
+            <p class="place-title">장소</p>
+            <p class="place">{{club.location}}</p>
+        </div>
+        <img class ="image-place" src="{% static 'img/test2.jpg' %}" alt="">
     </div>
     
 </body>
 
+<footer style="background-color: #151937;">
+    <p style="color: #92AAFFCC; font-weight: 700;">Contact</p>
+    <div style="margin-top: 9px;">
+        <p>Instagram</p>
+        <p>@likelion_hansung</p>
+    </div>
+    <div style="margin-top: 6px;">
+        <p>Kakaotalk</p>
+        <p>한성대학교 멋쟁이사자처럼</p>
+    </div>
+</footer>
 </html>
