@@ -15,10 +15,10 @@ class ClubAdmin(admin.ModelAdmin):
 
 @admin.register(Pub)
 class PubAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'description', 'location', 'short_content', 'belong')
+    list_display = ('id', 'name', 'description', 'location', 'belong')
 
-    def short_content(self):
-        return self.content[:10]
+    # def short_content(self):
+        # return self.content[:10]
     
 
 @admin.register(Menu)

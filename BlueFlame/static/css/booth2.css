@@ -1,0 +1,423 @@
+/* 부스 */
+body{
+    position: relative;
+    width: 375px;
+    left: 522px;
+    height: 2000px;
+    background: #090B26;
+
+    margin: 0px;
+    border: 1px solid red;
+}
+
+
+.title{
+    margin-top: 175px;
+    margin-left: 15px;
+}
+
+.track-text{
+position: absolute;
+width: 171px;
+height: 15px;
+left: -25px;
+top: 76px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 100%;
+/* identical to box height, or 15px */
+text-align: center;
+letter-spacing: 0.1px;
+
+/* #92AAFF */
+color: #92AAFF;
+
+
+}
+
+.drink-text{
+    /* 문문콘트랙 주점 */
+
+position: absolute;
+width: 127px;
+height: 20px;
+left: 20px;
+top: 103px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 100%;
+/* identical to box height, or 20px */
+letter-spacing: 0.1px;
+
+/* #92AAFF */
+color: #92AAFF;
+
+
+}
+
+.image{
+    /* Rectangle 204 */
+
+position: absolute;
+width: 375px;
+height: 375px;
+left: calc(50% - 375px/2);
+top: 151px;
+
+background: url(image.png);
+
+}
+
+.ss-text{
+    /* 주점에 대한 설명은 여기에 배치해요. 불성실한 주점 주인들이 설명을 안 주었다면 그냥 비워둬요. 행간은 160%로 지정해줘요. 연락망도 여기 같이 이런식 INSTA : @hansung_student */
+
+position: absolute;
+width: 335px;
+height: 80px;
+left: 19px;
+top: 542px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 160%;
+/* or 19px */
+
+/* #92AAFF */
+color: #92AAFF;
+
+
+}
+
+.INSTA{
+    position: absolute;
+width: 335px;
+height: 80px;
+left: 19px;
+top: 565px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 500;
+font-size: 10px;
+line-height: 160%;
+/* or 19px */
+
+/* #92AAFF */
+color: #92AAFF;
+
+}
+
+
+
+.menu-text{
+    /* 메뉴 */
+position: absolute;
+width: 28px;
+height: 20px;
+left: 19px;
+top: 677px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 125% */
+
+/* #92AAFF */
+color: #92AAFF;
+
+
+
+}
+
+.l1-menu{
+    /* 황도 */
+
+position: absolute;
+width: 20px;
+height: 0px;
+left: 180px;
+top: 732px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+
+/* #92AAFF */
+color: #92AAFF;
+
+
+}
+
+.l2-menu{
+    /* 비앤나소세지 */
+
+position: absolute;
+width: 100px;
+height: 20px;
+left: 19px;
+top: 744px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+
+/* #92AAFF */
+color: #92AAFF;
+
+
+}   
+
+.l3-menu{
+    /* 계란토스트 */
+
+position: absolute;
+width: 80px;
+height: 20px;
+left: 19px;
+top: 772px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+
+/* #92AAFF */
+color: #92AAFF;
+
+
+}
+
+.l4-menu{
+    position: absolute;
+width: 80px;
+height: 20px;
+left: 19px;
+top: 800px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+
+/* #92AAFF */
+color: #92AAFF;
+
+}
+
+.l5-menu{
+    position: absolute;
+    width: 80px;
+    height: 20px;
+    left: 19px;
+    top: 828px;
+    
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    
+    /* #92AAFF */
+    color: #92AAFF;
+    
+}
+
+.r1-menu{
+/* ₩ 3000 */
+
+position: absolute;
+width: 51px;
+height: 20px;
+left: 201px;
+top: 716px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+
+/* #92AAFF */
+color: #92AAFF;
+
+
+}
+
+.r2-menu{
+    /* ₩ 3000 */
+
+position: absolute;
+width: 51px;
+height: 20px;
+left: 201px;
+top: 744px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+
+/* #92AAFF */
+color: #92AAFF;
+
+
+}
+
+.r3-menu{
+    /* ₩ 3000 */
+
+position: absolute;
+width: 51px;
+height: 20px;
+left: 201px;
+top: 772px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+
+/* #92AAFF */
+color: #92AAFF;
+
+
+}
+
+.r4-menu{
+    position: absolute;
+    width: 51px;
+    height: 20px;
+    left: 201px;
+    top: 800px;
+    
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    
+    /* #92AAFF */
+    color: #92AAFF;
+    
+    
+}
+
+.r5-menu{
+    position: absolute;
+    width: 51px;
+    height: 20px;
+    left: 201px;
+    top: 828px;
+    
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    
+    /* #92AAFF */
+    color: #92AAFF;
+    
+    
+}
+
+.line-menu{
+    /* Line 8 */
+
+position: absolute;
+width: 170px;
+height: 0px;
+left: 90px;
+top: 808px;
+
+/* #92AAFF */
+border: 1px solid #92AAFF;
+transform: rotate(90deg);
+
+}
+
+
+.place-title{
+/* 장소 */
+
+position: absolute;
+width: 40px;
+height: 20px;
+left: 19px;
+top: 945px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height, or 125% */
+
+/* #92AAFF */
+color: #92AAFF;
+
+
+}
+
+.place{
+/* 상상관 8-9 */
+
+position: absolute;
+width: 80px;
+height: 20px;
+left: 80px;
+top: 948px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+
+/* #92AAFF */
+color: #92AAFF;
+
+
+}
+
+.image-place{
+/* image 77 */
+
+position: absolute;
+width: 335px;
+height: 228px;
+left: 19px;
+top: 990px;
+
+border-radius: 4px;
+
+}

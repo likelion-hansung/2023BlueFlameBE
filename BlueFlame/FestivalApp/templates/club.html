@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/default.css' %}">
+    <link rel="stylesheet" href="{% static 'css/booth2.css' %}">
+    <title>{{club.name}}</title>
+</head>
+
+<body class="div1">
+    <div class="title">
+        <p class="track-text">{{club.belong}}</p>
+        <p class="drink-text">{{club.name}}</p>
+        <img class ="image" src="{{club.image.url}}" alt="이미지 설명">
+        <p class="ss-text">
+            {{club.content}}
+        </p>
+        <p class="ss-text">
+            {{club.information}}
+        </p>
+        <p class="ss-text">
+            INSTA: {{club.contact}}
+        </p>
+    </div>
+
+
+    <div class="div3">
+        <p class="place-title">장소</p>
+        <p class="place">{{club.location}}</p>
+        <img class ="image-place" src="{% static 'image/a.jpg' %}" alt="">
+
+
+    </div>
+    
+</body>
+
+</html>
