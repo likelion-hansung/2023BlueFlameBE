@@ -24,7 +24,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-STATIC_URL = '/static/'
+
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
