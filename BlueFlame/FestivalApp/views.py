@@ -5,7 +5,7 @@ def home(request):
     return render(request, 'main.html')
 
 def timeLine(request):
-    return render(request, 'timeline2.html')
+    return render(request, 'timeline.html')
 
 def booth2(request):
     return render(request, 'booth(Day1).html')
