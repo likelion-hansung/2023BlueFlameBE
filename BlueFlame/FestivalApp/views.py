@@ -24,11 +24,11 @@ def booth(request, day):
 
 def pubDetail(request, pub_id):
     pub = get_object_or_404(Pub, pk = pub_id)
-    return render(request, 'pub.html', {'pub':pub})
+    return render(request, 'pubDetail.html', {'pub':pub})
 
 def clubDetail(request, club_id):
     club = get_object_or_404(Club, pk = club_id)
-    return render(request, 'club.html', {'club':club})
+    return render(request, 'clubDetail.html', {'club':club})
 
 def aboutUs(request):
     return render(request, 'aboutus.html')

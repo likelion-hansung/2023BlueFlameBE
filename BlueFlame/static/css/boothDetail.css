@@ -1,0 +1,154 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #090B26;
+    color: #92AAFF;
+    font-family: 'Pretendard';
+}
+.boothDetail-container{
+    background-color: #090B26;
+    color: #92AAFF;
+    font-family: 'Pretendard';
+
+    display: flex;
+    flex-direction: column;
+
+    padding-bottom: 100px;
+}
+.blank-box{
+    padding-top: 50px;
+}
+.track,.pub,.detail-insta,.menu,.place-box{
+    margin-left: 20px;
+}
+.booth-img,.place-img{
+    text-align: center;
+}
+.booth-info{
+    text-align: center;
+}
+/* 동아리 일 때 */
+/* .club-info{
+    text-align: center;
+} */
+.track{
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 0.1px;
+
+    margin-bottom: 12px;
+}
+.pub{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.1px;
+
+    margin-bottom: 28px;
+}
+
+.booth-img{
+    width: 375px;
+    height: 375px;
+    margin: auto;
+}
+
+.booth-img img{
+    width: 375px;
+    height: 375px;
+    margin: auto;
+}
+
+.booth-info{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 160%;
+
+    margin-top: 16px;
+}
+
+.detail-insta{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 160%;
+
+    margin-top: 10px;
+    margin-bottom: 31px;
+}
+
+.boothDetail-hr{
+    width: 100vw;
+    height: 8px;
+
+    background-color: #090B26;
+    border: none;
+}
+
+.menu{
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+.menu-title{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    
+    margin-bottom: 19px;
+}
+.menu-detail{
+    display: flex;
+    flex-direction: row;
+
+    font-size: 14px;
+}
+
+.menu-food{
+    padding-right: 108px;
+    padding-bottom: 8px;
+}
+
+.menu-price{
+    border-left: 1px solid #92AAFF;
+
+    padding-left: 13px;
+    padding-bottom: 8px;
+}
+ .menu-detail:last-child .menu-food{
+    padding-bottom: 0px;
+ }
+ .menu-detail:last-child .menu-price{
+    padding-bottom: 0px;
+ }
+
+ .place-box{
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 16px;
+    margin-bottom: 16px;
+ }
+
+ .place-title{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+
+    margin-right: 20px;
+ }
+
+ .booth-location{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+ }
+
+ .place-img{
+    width: 335px;
+    height: 228px;
+    border-radius: 4px;
+    margin: auto;
+ }
+
