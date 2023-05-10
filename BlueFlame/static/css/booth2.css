@@ -1,13 +1,56 @@
 /* 부스 */
 body{
     position: relative;
-    width: 375px;
-    left: 522px;
     height: 2000px;
     background: #090B26;
-
     margin: 0px;
-    border: 1px solid red;
+}
+
+
+.back-image{
+    position: absolute;
+    width: 12px;
+    height: 15px;
+    left: 0px;
+    top: 5px;
+}
+.button{
+    background-color: transparent;
+    position: absolute;
+    width: 6.5px;
+    height: 50px;
+    left: 29px;
+    top: 29px;
+    
+    /* 1 */
+    border: 2px solid #090B26;
+}
+
+.logo{
+    /* Blue Flame */
+
+position: absolute;
+width: 104px;
+height: 38px;
+left: 136px;
+top: 20px;
+
+font-family: 'BagerichDemo';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 160%;
+/* or 38px */
+text-align: center;
+letter-spacing: -0.02em;
+
+color: #3A4DEE;
+
+
+}
+
+.navbar {
+    padding-top: 5% ;
 }
 
 
@@ -17,10 +60,12 @@ body{
 }
 
 .track-text{
-    padding-left: 5%;
+    padding-top: 12%;
+    padding-bottom: 5%;
+    padding-left: 4%;
 width: 171px;
 height: 15px;
-left: 16px;
+left: 10px;
 top: 76px;
 
 font-family: 'Pretendard';
@@ -65,6 +110,8 @@ color: #92AAFF;
     /* Rectangle 204 */
 
 
+    padding-top: 4%;
+    padding-bottom: 4%;
 width: 375px;
 height: 375px;
 left: calc(50% - 375px/2);
@@ -127,6 +174,8 @@ height: 20px;
 left: 19px;
 top: 677px;
 
+padding-bottom: 5%;
+padding-top: 5%;
 padding-left: 5%;
 
 font-family: 'Pretendard';
@@ -205,6 +254,7 @@ transform: rotate(90deg);
 
 .place-title{
 /* 장소 */
+padding-top: 5%;
 padding-left: 5%;
 display: inline-block; /* 요소를 인라인 블록으로 설정하여 나란히 배치 */
     margin-right: 10px; /* 요소 사이 간격 설정 */
@@ -257,8 +307,10 @@ color: #92AAFF;
 .image-place{
 /* image 77 */
 
-
-width: 335px;
+padding-top: 3%;
+padding-bottom: 10%;
+padding-left: 5%;
+width: 350px;
 height: 228px;
 left: 19px;
 top: 990px;

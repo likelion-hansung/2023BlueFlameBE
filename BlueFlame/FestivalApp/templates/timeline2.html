@@ -1,0 +1,310 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+ <link rel="stylesheet" href="{% static 'css/default.css' %}">
+  <link rel="stylesheet" href="{% static 'css/timeline.css' %}">
+  <title>TimeTable</title>
+</head>
+
+<body>
+  <nav class="navbar fixed-top">
+    <input type="checkbox" id="icon">
+<label for="icon">  <!--label은 인라인 스타일-->
+    <span></span>
+    <span></span>
+    <span></span>
+</label>
+<div id="header">
+    <img src="{% static 'img/Menu.png' %}" style="height: 3vh; margin-top: 27px; margin-left: 30px;" >
+    <ul class="menu_item" style="margin-left: 30px;">
+        <li> 
+            <img src="{% static 'img/Vector.png' %}" style="height: 1.5vh;">
+            <a href="{% url 'timeline' %}">타임 테이블</a>
+        </li>
+        <li class="menu_li">
+            <img src="{% static 'img/Vector.png' %}" style="height: 1.5vh;">
+            <a href="{% url 'booth' 0 %}">부스 안내</a>
+        </li>
+        <li class="menu_li">
+            <img src="{% static 'img/Vector.png' %}" style="height: 1.5vh;">
+            <a href="{% url 'aboutus' %}">About us</a>
+        </li>
+        <li class="menu_li">
+          <img src="{% static 'img/Vector.png' %}" style="height: 1.5vh;">
+          <a href="{% url 'home' %}">Home</a>
+      </li>
+    </ul>
+</div>
+</nav>
+  <!-- menu bar -->
+  <div class="grid text-center" style="display: flex; margin-top: 50px;">
+    <div class="g-col-4" style="width: 33.33%;" data-day="day1">
+      <div class="ex-day">
+        Day 1
+      </div>
+      <div class="ex-date">
+        05.10
+      </div>
+    </div>
+    <div class="g-col-4" style="width: 33.33%;" data-day="day2">
+      <div class="ex-day">
+        Day 2
+      </div>
+      <div class="ex-date">
+        05.11
+      </div>
+    </div>
+    <div class="g-col-4" style="width: 33.33%;" data-day="day3">
+      <div class="ex-day">
+        Day 3
+      </div>
+      <div class="ex-date">
+        05.12
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="container-box">
+      <!--day1-->
+      <ul id="day1" class="day-content">
+        <!-- <li class="darkblue">
+          <span></span>
+          <div>
+            <div class="title">총학생회 이벤트 '이음 노래방'</div>
+            <div class="info2">잔디광장 앞 무대</div>
+          </div>
+          <span class="number">
+            <span>16:50~&nbsp 17:50</span>
+          </span>
+        </li>
+        <li class="darkblue">
+          <span></span>
+          <div>
+            <div class="type">개회식</div>
+          </div>
+        </li>
+        <li class="blue">
+          <span></span>
+          <div>
+            <div class="title">동아리공연</div>
+            <div class="info">브릴란테</div>
+            <!-- <div class="type">Presentation</div> 
+          </div>
+          <span class="number">
+            <span>18:40~&nbsp 18:55</span>
+          </span>
+        </li>
+        <li class="blue">
+          <span></span>
+          <div>
+            <div class="title">동아리공연</div>
+            <div class="info">4호선 마이크</div>
+            <!-- <div class="type">Presentation</div> 
+          </div>
+          <span class="number">
+            <span>19:00~&nbsp 19:30</span>
+          </span>
+        </li>
+        <li class="darkblue">
+          <span></span>
+          <div>
+            <div class="title">Movie Festival</div>
+            <div class="info2">상상관 앞 중앙 잔디</div>
+          </div>
+          <span class="number">
+            <span>19:30~&nbsp 19:30</span>
+          </span>
+        </li> -->
+        
+        <div style="text-align: center;">
+          <img src="{% static 'img/05:10.png' %}" width="300">
+        </div>
+      </ul>
+    </div>
+
+    <div class="container-box">
+      <!--day2-->
+      <ul id="day2" class="day-content" style="display: none;">
+        <!-- <li class="darkblue">
+          <span></span>
+          <div>
+            <div class="title">낙산가요제</div>
+            <div class="info2">잔디광장 앞 무대</div>
+          </div>
+          <span class="number">
+            <span>16:50~&nbsp 17:50</span>
+          </span>
+        </li>
+        <li class="blue">
+          <span></span>
+          <div>
+            <div class="title">동아리공연</div>
+            <div class="info">들불</div>
+          </div>
+          <span class="number">
+            <span>18:40~&nbsp 18:55</span>
+          </span>
+        </li>
+        <li class="blue">
+          <span></span>
+          <div>
+            <div class="title">동아리공연</div>
+            <div class="info">왕산악</div>
+          </div>
+          <span class="number">
+            <span>19:00~&nbsp 19:30</span>
+          </span>
+        </li>
+        <li class="lightblue">
+          <span></span>
+          <div>
+            <div class="title">초청아티스트 공연</div>
+            <div class="info" style="margin-bottom:1%;">임재현</div>
+            <div class="info">오마이걸</div>
+          </div>
+          <span class="number">
+            <span>19:30~&nbsp 19:30</span>
+          </span>
+        </li> -->
+        <div style="text-align: center;">
+          <img src="{% static 'img/05:11.png' %}" width="300">
+        </div>
+      </ul>
+    </div>
+
+    <div class="container-box">
+      <!--day3-->
+      <ul id="day3" class="day-content" style="display: none;">
+        <!-- <li class="blue">
+          <span></span>
+          <div>
+            <div class="title">동아리공연</div>
+            <div class="info">탈패</div>
+          </div>
+          <span class="number">
+            <span>18:40~&nbsp 18:55</span>
+          </span>
+        </li>
+        <li class="blue">
+          <span></span>
+          <div>
+            <div class="title">동아리공연</div>
+            <div class="info">트라이엑스</div>
+          </div>
+          <span class="number">
+            <span>18:40~&nbsp 18:55</span>
+          </span>
+        </li>
+        <li class="blue">
+          <span></span>
+          <div>
+            <div class="title">동아리공연</div>
+            <div class="info">엔오디</div>
+          </div>
+          <span class="number">
+            <span>19:00~&nbsp 19:30</span>
+          </span>
+        </li>
+        <li class="darkblue">
+          <span></span>
+          <div>
+            <div class="type">폐막식</div>
+          </div>
+        </li>
+        <li class="lightblue">
+          <span></span>
+          <div>
+            <div class="title">초청아티스트 공연</div>
+            <div class="info" style="margin-bottom:1%;">헤이즈</div>
+            <div class="info">호미들 & 릴김치</div>
+          </div>
+          <span class="number">
+            <span>19:30~&nbsp 19:30</span>
+          </span>
+        </li>
+        <li class="darkblue">
+          <span></span>
+          <div>
+            <div class="type">학생대표 인사</div>
+          </div>
+        </li>
+        <li class="lightblue">
+          <span></span>
+          <div>
+            <div class="title">초청아티스트 공연</div>
+            <div class="info">볼빨간사춘기</div>
+          </div>
+          <span class="number">
+            <span>19:30~&nbsp 19:30</span>
+          </span>
+        </li> -->
+        <div style="text-align: center;">
+          <img src="{% static 'img/05:12.png' %}" width="300">
+        </div>
+      </ul>
+    </div>
+  </div>
+
+  <footer style="background-color: #151937;">
+    <p style="color: #92AAFFCC; font-weight: 700; margin-top: 200;">Contact</p>
+    <div style="margin-top: 9px;">
+        <p>Instagram</p>
+        <p>@likelion_hansung</p>
+    </div>
+    <div style="margin-top: 6px;">
+        <p>Kakaotalk</p>
+        <p>한성대학교 멋쟁이사자처럼</p>
+    </div>
+  </footer>
+
+  <script>
+    // 요일 클릭 이벤트 처리
+    const grid = document.querySelector(".grid");
+    const days = grid.querySelectorAll(".g-col-4");
+    const contents = document.querySelectorAll(".day-content");
+
+    // 첫 번째 요일에 active 클래스 추가
+    days[0].classList.add("active");
+
+    // dayContent 변수에 첫 번째 요일 콘텐츠를 할당
+    const dayContent = document.querySelector("#day1");
+    dayContent.style.display = "block";
+
+    days.forEach((day) => {
+      day.addEventListener("click", function () {
+        // 모든 요일에서 active 클래스를 제거
+        days.forEach((day) => {
+          day.classList.remove("active");
+        });
+
+        // 현재 클릭된 요일에 active 클래스 추가
+        this.classList.add("active");
+
+        // 해당하는 컨텐츠를 표시하도록 함
+        contents.forEach((content) => {
+          content.style.display = "none";
+        });
+
+        const dayContent = document.querySelector(`#${this.dataset.day}`);
+        dayContent.style.display = "block";
+
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>

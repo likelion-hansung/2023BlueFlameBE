@@ -1,0 +1,284 @@
+/* 부스 */
+html{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+p{margin: 0;}
+
+body{
+    background: #090B26;
+    padding: 0;
+    margin: 0;
+}
+
+/* main navbar */
+#first-tap-wrap{
+    display: flex;
+    width: 100%;
+    margin-top: 70px;
+}
+
+#first-tap1{
+    width: 33%;
+    text-align: center;
+    border-bottom: 1px solid #3A4DEE;
+}
+
+#first-tap2{
+    width: 33%;
+    text-align: center;
+    border-bottom: 1px solid #3A4DEE;
+}
+
+#first-tap3{
+    width: 33%;
+    text-align: center;
+    border-bottom: 1px solid #3A4DEE;
+}
+
+#first-time{
+    /* day1 */
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    text-align: center;
+
+    color: #3A4DEE;
+}
+
+#day1-info{
+    /* 05.10 */
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    color: #3A4DEE;
+}
+
+#second-time{
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    color: #3A4DEE;
+}
+
+#day2-info{
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: #3A4DEE;
+}
+
+#third-time{
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    color: #3A4DEE;
+}
+
+#day3-info{
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: #3A4DEE;
+}
+
+.second-nav{
+    display: flex;
+    width: 100%;
+    margin-top: 12px;
+}
+
+/* sub-navbar */
+.loc1{
+    box-sizing: border-box;
+    width: 80px;
+    height: 38px;
+    text-align: center;
+
+    border-radius: 19px;
+    border: 1px solid #3A4DEE;
+    border-radius: 19px;
+    line-height: 32px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#location1{
+    background: #3A4DEE;
+}
+
+.loc2{
+    box-sizing: border-box;
+    width: 117px;
+    height: 38px;
+    text-align: center;
+    line-height: 32px;
+    margin-right: 10px;
+
+    border: 1px solid #3A4DEE;
+    border-radius: 19px;
+}
+
+
+.loc3{
+    box-sizing: border-box;
+    width: 117px;
+    height: 38px;
+    text-align: center;
+    line-height: 32px;
+    margin-right: 10px;
+
+    border: 1px solid #3A4DEE;
+    border-radius: 19px;
+}
+
+
+.loc1-text{
+    /* 모두보기 */    
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 40px;
+    letter-spacing: 0.1px;
+}
+
+
+.loc2-text{
+    /* 이벤트 부스 */
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 40px;
+
+    letter-spacing: 0.1px;
+}
+
+
+.loc3-text{
+    /* 먹거리 장터 */
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 40px;
+    letter-spacing: 0.1px;
+
+    color: #3A4DEE;
+}
+
+/* 세부 내용 */
+/* 부스 설명 sector(2개 묶음) */
+.location-sector-wrap{
+    display: block;
+    margin-top: 24px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    height: 241px;
+}
+
+/* sector의 첫번째 요소 */
+.location-sector1{
+    float: left;
+    margin-right: 9px;
+    height: 241px;
+}
+
+/* sector의 두번째 요소 */
+.location-sector2{
+    height: 241px;
+    float: right
+}
+
+.img{
+    height: 163px;
+    border-radius: 4px;
+}
+
+.major{
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 100%;
+    letter-spacing: 0.1px;
+    color: #92AAFF;
+    margin-top: 12px;
+}
+
+.sub{
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    margin-top: 8px;
+    
+    letter-spacing: 0.1px;
+    color: #92AAFF;
+}
+
+.tag-container{
+    display: flex;
+}
+
+.place{
+    box-sizing: border-box;
+    padding: 4px 8px;
+    gap: 10px;
+    
+    border: 1px solid #92AAFF;
+    border-radius: 4px;
+
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 100%;
+    letter-spacing: 0.1px;
+
+    color: #92AAFF;
+    margin-top: 16px;
+}
+
+.tag-info{
+    display: flex;
+    box-sizing: border-box;
+
+    padding: 4px 8px;
+    gap: 10px;
+    
+    border: 1px solid #627BFF;
+    border-radius: 4px;
+
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 100%;
+    letter-spacing: 0.1px;
+
+    color: #627BFF;
+    margin-top: auto;
+    margin-left: 4px;
+}

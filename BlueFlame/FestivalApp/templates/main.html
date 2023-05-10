@@ -1,0 +1,196 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 부트스트랩 CSS 파일 추가 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+
+<!-- jQuery 라이브러리 파일 추가 -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/default.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+    <title>2023 대동제:Blue Flame</title>
+</head>
+
+<body>
+    <nav class="navbar fixed-top">
+        <input type="checkbox" id="icon">
+    <label for="icon">  <!--label은 인라인 스타일-->
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <div id="header">
+        <img src="{% static 'img/Menu.png' %}" style="height: 3vh; margin-top: 27px; margin-left: 30px;" >
+        <div class="line"></div>
+        <ul class="menu_item" style="margin-left: 30px;">
+            <li> 
+                <img src="{% static 'img/Vector.png' %}" style="height: 1.5vh;">
+                <a href="{% url 'timeline' %}">타임 테이블</a>
+            </li>
+            <li class="menu_li">
+                <img src="{% static 'img/Vector.png' %}" style="height: 1.5vh;">
+                <a href="{% url 'booth' 0 %}">부스 안내</a> 
+            </li>
+            <li class="menu_li">
+                <img src="{% static 'img/Vector.png' %}" style="height: 1.5vh;">
+                <a href="{% url 'aboutus' %}">About us</a>
+            </li>
+            <li class="menu_li">
+                <img src="{% static 'img/Vector.png' %}" style="height: 1.5vh;">
+                <a href="{% url 'home' %}">Home</a>
+            </li>
+        </ul>
+    </div>
+    </nav>
+    <section class="sec" id="sec1">
+        <div>
+            <p style="font-size: 1.4rem; color: #3A4DEE";>2023년 한성대학교 대동제</p>
+            <img src="{% static 'img/LogoText.png' %}" alt="BlueFlame" style="margin-top: 2vh; margin-bottom: 4vh; width: 260px;">
+            <p style="font-size: 1.2rem; margin-bottom: 2vh; color: #3A4DEE">05/10 Wed - 05/12 Fri</p>
+            <img src="{% static 'img/SwipeLogo.png' %}" alt="hsu_logo_img" class="img-fluid" style="height: 50vh;"/>
+            <div id="sec1div">
+                <p>높은 온도에서 푸른빛을 띠는 파란 불꽃<br>
+                푸른빛 일렁이며 뜨겁게 타오르는 대동제</p>
+                <p style="font-weight: 300;">Blue flame with blue light at high temperature<br>
+                Blue a wave of sparks that is made together in Daedongje and burned hot</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec" id="sec2">
+        <img src="{% static 'img/Star.png' %}"/>
+        <p style="font-size: 1.5rem; margin-bottom: 1vh;">Line-up</p>
+        <div class="sec2day">
+            <p>Day 2 (05/11)</p>
+            <div class="sec2artistA" style="background-color: #1A1071;">
+                <div>
+                    <div>
+                        <img src="{% static 'img/limjaehyunText.png' %}">
+                        <p>임재현</p>
+                    </div>
+                    <img src="{% static 'img/limjaehyun.png' %}" alt="임재현"/>
+                </div>
+            </div>
+            <div class="sec2artistB" style="background-color: #301DB1">
+                <div>
+                    <div>
+                        <img src="{% static 'img/ohmygirlText.png' %}">
+                        <p style="color: #A194FF;">오마이걸</p>
+                    </div>
+                    <img src="{% static 'img/ohmygirl.png' %}" alt="오마이걸"/>
+                </div>
+            </div>
+        </div>
+        <div class="sec2day">
+            <p>Day 3 (05/12)</p>
+            <div class="sec2artistA" style="background-color: #A194FF;">
+                <div>
+                    <div>
+                        <img src="{% static 'img/heizeText.png' %}">
+                        <p style="color: #301DB1;">헤이즈</p>
+                    </div>
+                    <img src="{% static 'img/heize.png' %}" alt="헤이즈"/>
+                </div>
+            </div>
+            <div class="sec2artistB" style="background-color: #7E75FF;">
+                <div>
+                    <div>
+                        <img src="{% static 'img/homieduelText.png' %}">
+                        <p style="color: #E5E2FF;">호미들</p>
+                    </div>
+                    <img src="{% static 'img/homieduel.png' %}" alt="호미들"/>
+                </div>
+            </div>
+            <div class="sec2artistA" style="background-color: #3830A0;">
+                <div>
+                    <div>
+                        <img src="{% static 'img/lilgimchiText.png' %}">
+                        <p style="color: #A194FF;">릴김치</p>
+                    </div>
+                    <img src="{% static 'img/lilgimchi.png' %}" alt="릴김치"/>
+                </div>
+            </div>
+        </div>
+        <div class="sec2artistB" style="background-color: #232371;">
+            <div>
+                <div>
+                    <img src="{% static 'img/Car the garden.png' %}">
+                    <p style="color: #938BFF;">카더가든</p>
+                </div>
+                <img src="{% static 'img/카더가든.png' %}" alt="카더가든"/>
+            </div>
+        </div>
+        <div class="sec2artistA" style="background-color: #9E9FF6;">
+            <div>
+                <div>
+                    <img src="{% static 'img/Meenoi.png' %}">
+                    <p style="color: #1B1C5D;">미노이</p>
+                </div>
+                <img src="{% static 'img/미노이.png' %}" alt="미노이"/>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section class="sec" id="sec3">
+        <div class="container">
+            <div id="sec3nav">
+                <div class="item">
+                    <img style="height: 24px;" src="{% static 'img/folderlist.png' %}">
+                </div>
+                <div class="item" style="color: #92AAFF; font-size: 1.4rem;">
+                        행사 순서를 보고싶어요!
+                </div>  
+            </div>
+            <div class="secButton">
+                <button type="button" class="navButton" onclick="location.href='{% url 'timeline' %}'">
+                    <div class="navButtonText">
+                        <p style="font-size: 1.6rem; font-weight: 600;">타임 테이블</p>
+                        <p style="font-size: 1.4rem; font-weight: 400;">바로가기</p>
+                    </div>
+                    <div class="arrow">
+                        <img style="height: 100%;" src="{% static 'img/Arrow 1.png' %}">
+                    </div>
+                </button>
+            </div>
+        </div>
+        <div class="container">
+            <div id="sec3nav">
+                <div class="item">
+                    <img style="height: 24px;" src="{% static 'img/store.png' %}">
+                </div>
+                <div class="item" style="color: #92AAFF; font-size: 1.4rem;">
+                        부스 정보를 알고싶어요!
+                </div>  
+            </div>
+            <div class="secButton">
+                <button type="button" class="navButton" onclick="location.href='{% url 'booth' 0 %}'">
+                    <div class="navButtonText">
+                        <p style="font-size: 1.6rem; font-weight: 600;">부스 안내</p>
+                        <p style="font-size: 1.4rem; font-weight: 400;">바로가기</p>
+                    </div>
+                    <div class="arrow">
+                        <img style="height: 100%;" src="{% static 'img/Arrow 1.png' %}">
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+    <footer style="background-color: #151937;">
+        <p style="color: #92AAFFCC; font-weight: 700;">Contact</p>
+        <div style="margin-top: 9px;">
+            <p>Instagram</p>
+            <p>@likelion_hansung</p>
+        </div>
+        <div style="margin-top: 6px;">
+            <p>Kakaotalk</p>
+            <p>한성대학교 멋쟁이사자처럼</p>
+        </div>
+    </footer>
+</body>
+</html>

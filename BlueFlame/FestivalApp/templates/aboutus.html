@@ -1,0 +1,200 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/aboutus.css' %}">
+    <link rel="stylesheet" href="{% static 'css/default.css' %}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar fixed-top">
+        <input type="checkbox" id="icon">
+    <label for="icon">  <!--label은 인라인 스타일-->
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <div id="header">
+        <img src="{% static 'img/Menu.png' %}" style="height: 3vh; margin-top: 27px; margin-left: 30px;" >
+        <div class="line"></div>
+        <ul class="menu_item" style="margin-left: 30px;">
+            <li>
+                <img src="{% static 'img/Vector.png' %}" style="height: 1.5vh;">
+                <a href="{% url 'timeline' %}">타임 테이블</a>
+            </li>
+            <li>
+                <img src="{% static 'img/Vector.png' %}" style="height: 1.5vh;">
+                <a href="{% url 'booth' 0 %}">부스 안내</a>
+            </li>
+            <li>
+                <img src="{% static 'img/Vector.png' %}" style="height: 1.5vh;">
+                <a href="{% url 'aboutus' %}">About us</a>
+            </li>
+            <li class="menu_li">
+                <img src="{% static 'img/Vector.png' %}" style="height: 1.5vh;">
+                <a href="{% url 'home' %}">Home</a>
+            </li>
+        </ul>
+    </div>
+    </nav>
+    <div class="aboutus-container">
+        <div class="blank-box"></div>
+        <div class="aboutus-title">About us</div>
+        <nav class="aboutus-nav">
+            <div id="nav1" onclick="changeToLikelion()">멋쟁이 사자처럼</div>
+            <div id="nav2" onclick="changeToCreator()">Developer</div>
+        </nav>
+
+        <!-- 멋쟁이 사자처럼 페이지 -->
+        <div id="likelion-page">
+            <img id="likelion-logo-img" src="{% static 'img/logo.png' %}">
+            <div id="likelion-explain">
+                멋쟁이사자처럼은 전국 61개의 대학이 모인<br>
+                전국 최대 규모 개발/창업 동아리입니다.<br>
+                <br>
+                한성대학교 멋쟁이사자처럼은 현재 약 30명의 부원이 활동하고 있으며,<br>
+                일상의 불편함에서얻은 아이디어를 통해<br>
+                소소하고도 확실한 편리를 만들어내는 서비스를<br>
+                직접 구현할 수 있도록 교육하고 있습니다.<br><br>
+
+                간만에 찾아온 봄 축제를 학우분들이 보다 편하고 즐겁게<br>
+                즐기시길 바라는 마음으로 본 사이트를 기획하게 되었습니다.<br><br>
+
+                감사합니다 :&#41;
+            </div>
+            <img id="likelion-all" src="{% static 'img/all.png' %}">
+
+            <a href="https://likelionhsu.oopy.io/">
+                <button>멋쟁이사자처럼 더 알아보기</button>
+            </a>
+        </div>
+        
+        <!-- 만든 이들 페이지 -->
+        <div id="creator-page" style="color:aliceblue">
+            <div class="creator" id="de">UI Designer</div>
+            <div class="box">
+                <div class="creator-box" id="de-box">
+                    <img class="creator-img" src="{% static 'img/people/구가영.png' %}">
+                    <div class="creator-info" id="de-info">
+                        <p class="creator-position">디자인 팀장</p>
+                        <p class="creator-name">구가영</p>
+                    </div>
+                </div>
+                <div class="creator-box" id="de-box">
+                    <img class="creator-img" src="{% static 'img/people/박혜연.png' %}">
+                    <div class="creator-info" id="de-info">
+                        <p class="creator-position">디자인 팀원</p>
+                        <p class="creator-name">박혜연</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="creator" id="fe">Frontend</div>
+            <div class="box">
+                <div class="creator-box" id="fe-box">
+                    <img class="creator-img" src="{% static 'img/people/이자민.png' %}">
+                    <div class="creator-info">
+                        <p class="creator-position">PM, FE</p>
+                        <p class="creator-name">이자민</p>
+                    </div>
+                </div>
+                <div class="creator-box" id="fe-box">
+                    <img class="creator-img" src="{% static 'img/people/이장혁.png' %}">
+                    <div class="creator-info">
+                        <p class="creator-position">FE</p>
+                        <p class="creator-name">이장혁</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="creator-box" id="fe-box">
+                    <img class="creator-img" src="{% static 'img/people/조서영.png' %}">
+                    <div class="creator-info">
+                        <p class="creator-position">FE</p>
+                        <p class="creator-name">조서영</p>
+                    </div>
+                </div>
+                <div class="creator-box" id="fe-box">
+                    <img class="creator-img" src="{% static 'img/people/이서연.png' %}">
+                    <div class="creator-info">
+                        <p class="creator-position">FE</p>
+                        <p class="creator-name">이서연</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="creator-box" id="fe-box"> 
+                    <img class="creator-img" src="{% static 'img/people/이가현.png' %}">
+                    <div class="creator-info">
+                        <p class="creator-position">FE</p>
+                        <p class="creator-name">이가현</p>
+                    </div>
+                </div>
+                <div class="creator-box" id="fe-box">
+                    <img class="creator-img" src="{% static 'img/people/김지원.png' %}">
+                    <div class="creator-info">
+                        <p class="creator-position">FE</p>
+                        <p class="creator-name">김지원</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="creator-box" id="fe-box">
+                    <img class="creator-img" src="{% static 'img/people/임승빈.png' %}">
+                    <div class="creator-info">
+                        <p class="creator-position">FE</p>
+                        <p class="creator-name">임승빈</p>
+                    </div>
+                </div>
+                <div class="creator-box" id="fe-box" style="background-color: transparent;">
+                    <!-- <img class="creator-img" src="./people/임승빈.png">
+                    <div class="creator-info">
+                        <p class="creator-position">FE</p>
+                        <p class="creator-name">임승빈</p>
+                    </div> -->
+                </div>
+            </div>
+            <div class="creator" id="be">Backend</div>
+            <div class="box">
+                <div class="creator-box" id="be-box">
+                    <img class="creator-img" src="{% static 'img/people/이현승.png' %}">
+                    <div class="creator-info">
+                        <p class="creator-position">BE</p>
+                        <p class="creator-name">이현승</p>
+                    </div>
+                </div>
+                <div class="creator-box" id="be-box">
+                    <img class="creator-img" src="{% static 'img/people/양종욱.png' %}">
+                    <div class="creator-info">
+                        <p class="creator-position">BE</p>
+                        <p class="creator-name">양종욱</p>
+                    </div>
+                </div>
+            </div>
+            <div class="inspired">
+                Designed inspired by 총학생회 '이음'
+            </div>
+        </div>
+        <footer style="background-color: #151937;">
+            <p style="color: #92AAFFCC; font-weight: 700;">Contact</p>
+            <div style="margin-top: 9px;">
+                <p>Instagram</p>
+                <p>@likelion_hansung</p>
+            </div>
+            <div style="margin-top: 6px;">
+                <p>Kakaotalk</p>
+                <p>한성대학교 멋쟁이사자처럼</p>
+            </div>
+        </footer>
+    </div>
+    <script type="text/javascript" src="{% static 'js/aboutus.js' %}"></script> 
+    <script type="text/javascript" src="{% static 'js/data.js' %}"></script> 
+</body>
+</html>

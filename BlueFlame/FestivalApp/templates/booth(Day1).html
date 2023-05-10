@@ -1,0 +1,215 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/default.css' %}">
+    <link rel="stylesheet" href="{% static 'css/booth.css' %}">
+    <title>부스</title>
+</head>
+
+<body onload="first1()">
+    <nav class="navbar fixed-top">
+        <input type="checkbox" id="icon">
+    <label for="icon">  <!--label은 인라인 스타일-->
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <div id="header">
+        <img src="{% static 'img/Menu.png' %}" style="height: 3vh; margin-top: 27px; margin-left: 30px;" >
+        <div class="line"></div>
+        <ul class="menu_item" style="margin-left: 30px;">
+            <li>
+                <img src="{% static 'img/Vector.png' %}" style="height: 1.5vh;">
+                <a href="{% url 'timeline' %}">타임 테이블</a>
+            </li>
+            <li>
+                <img src="{% static 'img/Vector.png' %}" style="height: 1.5vh;">
+                <a href="{% url 'booth' 0 %}">부스 안내</a>
+            </li>
+            <li>
+                <img src="{% static 'img/Vector.png' %}" style="height: 1.5vh;">
+                <a href="{% url 'aboutus' %}">About us</a>
+            </li>
+            <li class="menu_li">
+                <img src="{% static 'img/Vector.png' %}" style="height: 1.5vh;">
+                <a href="{% url 'home' %}">Home</a>
+            </li>
+        </ul>
+    </div>
+    </nav>
+    <nav id="first-tap-wrap">
+        <div id="first-tap1" onclick="first1()">
+            <span id="first-time">Day 1</span>
+            <br>
+            <span id="day1-info">05.10</span>
+        </div>
+
+        <div id="first-tap2" onclick="location.href='{% url 'booth' 1 %}'">
+            <span id="second-time">Day 2</span>
+            <br>
+            <span id="day2-info">05.11</span>
+        </div>
+
+        <div id="first-tap3" onclick="location.href='{% url 'booth' 2 %}'">
+            <span id="third-time">Day 3</span>
+            <br>
+            <span id="day3-info">05.12</span>
+        </div>
+    </nav>
+
+    <div class="second-tap" id="day1-wrap" onload="first1()">
+        <nav class="second-nav">
+            <div class="loc1" id="location1" onclick="first1()">
+                <span class="loc1-text" id="location1-text">모두보기</span>
+            </div>
+            <div class="loc2" id="location2" onclick="first2()">
+                <span class="loc2-text" id="location2-text">이벤트 부스</span>
+            </div>
+            <div class="loc3" id="location3" onclick="first3()">
+                <span class="loc3-text" id="location3-text">먹거리 장터</span>
+            </div>
+        </nav>
+
+        <!-- 모두보기 세부-->
+        <div id="loc1-wrap">
+            <!-- for문 써야할 부분 -->
+            {% for pub in pubs %}
+                {% if pub.distinct == 0 %}
+                    <div class="location-sector-wrap">
+                        <div class="location-sector1">
+                            <a href="{% url 'pub' pub.id %}">
+                                <p><img class="img" src="{{pub.image.url}}"></p>
+                            </a>
+                            <p class="major" id="major1">{{pub.belong}}</p>
+                            <p class="sub">{{pub.name}}</p>
+                            <p class="tag-container">
+                                <span class="place">{{pub.location}}</span>
+                            </p>
+                        </div>
+                {% else %}
+                        <div class="location-sector2">
+                            <a href="{% url 'pub' pub.id %}">
+                                <p><img class="img" src="{{pub.image.url}}"></p>
+                            </a>
+                            <p class="major" id="major1">{{pub.belong}}</p>
+                            <p class="sub">{{pub.name}}</p>
+                            <p class="tag-container">
+                                <span class="place">{{pub.location}}</span>
+                            </p>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+            {% for club in clubs %}
+                {% if club.distinct == 0 %}
+                    <div class="location-sector-wrap">
+                        <div class="location-sector1">
+                            <a href="{% url 'club' club.id %}">
+                                <p><img class="img" src="{{club.image.url}}"></p>
+                            </a>
+                            <p class="major">{{club.belong}}</p>
+                            <p class="sub">{{club.name}}</p>
+                            <p class="tag-container">
+                                <span class="place">{{club.location}}</span>
+                            </p>
+                        </div>
+                {% else %}
+                        <div class="location-sector2">
+                            <a href="{% url 'club' club.id %}">
+                                <p><img class="img" src="{{club.image.url}}"></p>
+                            </a>
+                            <p class="major">{{club.belong}}</p>
+                            <p class="sub">{{club.name}}</p>
+                            <p class="tag-container">
+                                <span class="place">{{club.location}}</span>
+                            </p>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+            <!-- 여기까지 -->
+        </div>
+
+        <!-- 이벤트 부스 세부-->
+        <div id="loc2-wrap">
+            {% for club in clubs %}
+                {% if club.distinct == 0 %}
+                    <div class="location-sector-wrap">
+                        <div class="location-sector1">
+                            <a href="{% url 'club' club.id %}">
+                                <p><img class="img" src="{{club.image.url}}"></p>
+                            </a>
+                            <p class="major">{{club.belong}}</p>
+                            <p class="sub">{{club.name}}</p>
+                            <p class="tag-container">
+                                <span class="place">{{club.location}}</span>
+                            </p>
+                        </div>
+                {% else %}
+                        <div class="location-sector2">
+                            <a href="{% url 'club' club.id %}">
+                                <p><img class="img" src="{{club.image.url}}"></p>
+                            </a>
+                            <p class="major">{{club.belong}}</p>
+                            <p class="sub">{{club.name}}</p>
+                            <p class="tag-container">
+                                <span class="place">{{club.location}}</span>
+                            </p>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <!-- 먹거리 장터 세부 -->
+        <div id="loc3-wrap">
+            {% for pub in pubs %}
+                {% if pub.distinct == 0 %}
+                    <div class="location-sector-wrap">
+                        <div class="location-sector1">
+                            <a href="{% url 'pub' pub.id %}">
+                                <p><img class="img" src="{{pub.image.url}}"></p>
+                            </a>
+                            <p class="major" id="major1">{{pub.belong}}</p>
+                            <p class="sub">{{pub.name}}</p>
+                            <p class="tag-container">
+                                <span class="place">{{pub.location}}</span>
+                            </p>
+                        </div>
+                {% else %}
+                        <div class="location-sector2">
+                            <a href="{% url 'pub' pub.id %}">
+                                <p><img class="img" src="{{pub.image.url}}"></p>
+                            </a>
+                            <p class="major" id="major1">{{pub.belong}}</p>
+                            <p class="sub">{{pub.name}}</p>
+                            <p class="tag-container">
+                                <span class="place">{{pub.location}}</span>
+                            </p>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <footer style="background-color: #151937;">
+            <p style="color: #92AAFFCC; font-weight: 700;">Contact</p>
+            <div style="margin-top: 9px;">
+                <p>Instagram</p>
+                <p>@likelion_hansung</p>
+            </div>
+            <div style="margin-top: 6px;">
+                <p>Kakaotalk</p>
+                <p>한성대학교 멋쟁이사자처럼</p>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script type="text/javascript" src="{% static 'js/booth.js' %}"></script>
+</body>

@@ -9,6 +9,8 @@ class Club(models.Model):
     contact = models.CharField("CONTACT", max_length=50, blank=True, null=True) # 동아리 인스타 주소
     image = models.ImageField("IMAGE", upload_to="club/", blank=True, null=True) # 동아리 이미지
     date= models.IntegerField("DATE") # 부스 운영 날짜
+    belong = models.CharField("BELONG", max_length=50, blank=True, null=True) # 주점 소속
+    distinct=models.IntegerField("DIS", blank=True, null=True)
     # 0: 수, 1: 목, 2: 금
     
     class Meta:
@@ -28,6 +30,7 @@ class Pub(models.Model):
     contact = models.CharField("CONTACT", max_length=50, blank=True, null=True) # 주점 인스타 주소
     image = models.ImageField("IMAGE", upload_to="pub/", blank=True, null=True) # 주점 이미지
     date= models.IntegerField("DATE") # 부스 운영 날짜
+    distinct=models.IntegerField("DIS", blank=True, null=True)
     # 0: 수, 1: 목, 2: 금
     
 

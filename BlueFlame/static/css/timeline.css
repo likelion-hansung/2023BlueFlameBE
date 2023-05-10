@@ -1,0 +1,219 @@
+ .vr {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-left: 1px solid black;
+   margin-left: 20px;
+ }
+
+ /* ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+ } */
+
+ .g-col-4 {
+   margin-top: 10px;
+   color: white;
+ }
+
+ /* 각 요일에 대한 스타일 */
+ .grid .g-col-4 {
+   position: relative;
+   color: #3A4DEE;
+ }
+
+ .grid .g-col-4 .ex-day {
+   font-style: normal;
+   font-weight: 500;
+   font-size: 12px;
+   line-height: 100%;
+   margin-bottom: 10px;
+ }
+
+ .grid .g-col-4 .ex-date {
+   font-style: normal;
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 100%;
+ }
+
+ /* 밑에 선 스타일 */
+ .grid .g-col-4::after {
+   content: "";
+   position: absolute;
+   bottom: -10px;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 100%;
+   height: 1px;
+   background-color: #3A4DEE;
+ }
+
+ /* 선택된 요일의 스타일 */
+ .grid .g-col-4.active {
+   color: #92AAFF;
+ }
+
+ /* 선택된 요일의 밑에 선 스타일 */
+ .grid .g-col-4.active::after {
+   background-color: #92AAFF;
+   height: 2px;
+ }
+
+  /* 선택된 요일의 스타일 */
+  .grid .g-col-4:hover {
+    cursor: pointer; 
+  }
+
+ .darkblue {
+   background-color: #627BFF;
+ }
+
+ .blue {
+   background-color: #92AAFF;
+ }
+
+ .lightblue {
+   background-color: #B4C9FF;
+ }
+
+
+ body {
+   height: 10vh;
+   font-family: 'Open Sans', sans-serif;
+   background: #bea2e7;
+   /* Old browsers */
+   background: -moz-linear-gradient(top, #bea2e7 0%, #86b7e7 100%);
+   /* FF3.6-15 */
+   background: -webkit-linear-gradient(top, #bea2e7 0%, #86b7e7 100%);
+   /* Chrome10-25,Safari5.1-6 */
+   background: linear-gradient(to bottom, #090B26 0%, #090B26 100%);
+   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bea2e7', endColorstr='#86b7e7', GradientType=0);
+   /* IE6-9 */
+
+ }
+
+ .container {
+   text-align: center;
+   /* 가운데정렬 */
+   width: 80%;
+ }
+
+ .container .container-box {
+   display: inline-block;
+   /* 가운데정렬 */
+ }
+
+ .container ul {
+   margin: 0;
+   margin-top: 10%;
+   list-style: none;
+   position: relative;
+   color: #090B26;
+   font-size: 13px;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .container ul li {
+   text-align: left;
+   position: relative;
+   margin-left: 30px;
+   padding: 14px;
+   border-radius: 6px;
+   width: 110%;
+   box-shadow: 0 0 4px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.08);
+ }
+
+ .container ul li:not(:first-child) {
+   margin-top: 10px;
+ }
+
+ .container ul li>span {
+   width: 1px;
+   height: 130%;
+   background: #92AAFF;
+   left: -30px;
+   top: 0;
+   position: absolute;
+ }
+
+ .container ul li>span:before,
+ .container ul li>span:after {
+   content: '';
+   width: 7px;
+   height: 7px;
+   border-radius: 50%;
+   border: 0.5px solid #92AAFF;
+   position: absolute;
+   background: #92AAFF;
+   left: -3px;
+   top: 0;
+ }
+
+ .container ul li>div {
+   margin-left: 1%;
+ }
+
+ .container ul div .title,
+ .container ul div .type {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0.1px;
+ }
+ .container ul div .title {
+  margin-bottom: 10px;
+ }
+ .container ul div .info,
+ .container ul div .info2{
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0.1px;
+ }
+
+ .container ul div .info::before {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background-color: #090B26;
+  vertical-align: middle;
+  margin-top:-1%;
+ }
+
+  
+ .container ul li>div>div {
+   margin-top: 0px;
+ }
+
+ .container ul li span.number {
+   height: 150%;
+   color: #92AAFF;
+
+ }
+
+ .container ul li span.number span {
+   position: absolute;
+   font-size: 12px;
+   left: -45px;
+   font-weight: bold;
+ }
+
+ .container ul li span.number span:first-child {
+   top: 0;
+ }
+
+ .container ul li span.number span:last-child {
+   top: 0;
+ }
+ 

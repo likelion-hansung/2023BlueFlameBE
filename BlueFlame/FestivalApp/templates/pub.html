@@ -12,6 +12,47 @@
 </head>
 
 <body class="div1">
+    <button class="button" type="button" onclick="myFunction()">
+        <img class="back-image" src="{% static 'img/back.png' %}" alt="back_button">
+    </button>
+
+    <script>
+        function myFunction() {
+          // booth.html로 이동
+            window.location.href = "booth.html";
+        }
+    </script>
+    <img src="{% static 'img/LogoText.png' %}" alt="BlueFlame" class="logo" >
+    <nav class="navbar fixed-top">
+        <input type="checkbox" id="icon">
+    <label for="icon">  <!--label은 인라인 스타일-->
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <div id="header">
+        <img src="{% static 'img/Menu.png' %}" style="height: 3vh; margin-top: 27px; margin-left: 30px;" >
+        <div class="line"></div>
+        <ul class="menu_item" style="margin-left: 30px;">
+            <li> 
+                <img src="{% static 'img/Vector.png' %}" style="height: 1.5vh;">
+                <a href="{% url 'timeline' %}">타임 테이블</a>
+            </li>
+            <li class="menu_li">
+                <img src="{% static 'img/Vector.png' %}" style="height: 1.5vh;">
+                <a href="{% url 'booth' 0 %}">부스 안내</a> 
+            </li>
+            <li class="menu_li">
+                <img src="{% static 'img/Vector.png' %}" style="height: 1.5vh;">
+                <a href="{% url 'aboutus' %}">About us</a>
+            </li>
+            <li class="menu_li">
+                <img src="{% static 'img/Vector.png' %}" style="height: 1.5vh;">
+                <a href="{% url 'home' %}">Home</a>
+            </li>
+        </ul>
+    </div>
+    </nav>
     <div class="title">
         <p class="track-text">{{pub.belong}}</p>
         <p class="drink-text">{{pub.name}}</p>
@@ -29,24 +70,21 @@
     </div>
     <div class="upper-section">
         <p class="menu-text">메뉴</p>
-                {%for menu in pub.menu_set.all%}
-                    <div class="div2">
-                        <p class="l1-menu">{{menu.name}}</p>
-                        <hr class="line-menu">
-                        <p class="r1-menu"> {{menu.price}}</p>
-                    </div>
-                {%endfor%}
+            {%for menu in pub.menu_set.all%}
+                <div class="div2">
+                    <p class="l1-menu">{{menu.name}}</p>
+                    <hr class="line-menu">
+                    <p class="r1-menu"> {{menu.price}}</p>
+                </div>
+            {%endfor%}
     </div>
 
     <div class="lower-section">
         <div class="div3">
             <p class="place-title">장소</p>
             <p class="place">{{pub.location}}</p>
-            
-
-
         </div>
-        <img class ="image-place" src="{% static 'img/test2.jpg' %}" alt="">
+        <img class ="image-place" src="{% static 'img/booth12.png' %}" alt="">
     </div>
     
 </body>

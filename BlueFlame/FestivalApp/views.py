@@ -2,23 +2,25 @@ from django.shortcuts import get_object_or_404, render
 from .models import Pub, Club
 
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'main.html')
 
-def timeTable(request):
-    return render(request, 'timeTable.html')
+def timeLine(request):
+    return render(request, 'timeline2.html')
+
+def booth2(request):
+    return render(request, 'booth(Day1).html')
 
 def booth(request, day):
+    if day == 0:
+        template ="booth(Day1).html"
+    elif day == 1:
+        template ="booth(Day2).html"
+    else:
+        template="booth(Day3).html"
+        day = 1
     pubs = Pub.objects.filter(date = day)
     clubs = Club.objects.filter(date = day)
-    return render(request, 'index.html', {'pubs':pubs, 'clubs':clubs})
-
-def foodBooth(request, day):
-    pubs = Pub.objects.filter(date = day)
-    return render(request, 'index.html', {'pubs':pubs})
-
-def eventBooth(request, day):
-    clubs = Club.objects.filter(date = day)
-    return render(request, 'index.html', {'clubs':clubs})
+    return render(request, template, {'pubs':pubs, 'clubs':clubs})
 
 def pubDetail(request, pub_id):
     pub = get_object_or_404(Pub, pk = pub_id)

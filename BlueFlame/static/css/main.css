@@ -1,0 +1,188 @@
+@font-face {
+    font-family: 'Pretendard-Light';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+html, body{
+    font-size:62.5%;
+    background-color: #090B26;
+    font-family: 'Pretendard';
+    font-weight: 500;
+}
+
+p, div{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.sec{
+    background-color: #090B26;
+    color: #92AAFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#sec1{
+    height: 100vh;
+}
+#sec1 > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#sec1div{
+    width: 100vw;
+    background-color: #7881FF14;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 2vh;
+    padding: 1.6rem 0 1.6rem 0;
+}
+
+#sec1div :nth-child(1){
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+}
+
+#sec1div :nth-child(2){
+    margin-top: 0.7vh;
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+}
+
+#sec2{
+    padding-top: 7vh;
+}
+.sec2day{
+    width: 100vw;
+    background-color: #7881FF14;
+}
+
+.sec2day > p{
+    height: 5vh;
+    font-size: 1rem;
+    border-top: 1px solid #92AAFF;
+    border-bottom: 1px solid #92AAFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec2artistA{
+    height: 12vh;
+}
+.sec2artistA > div{
+    width: 100vw;
+    max-width: 48rem;
+    margin: 0 auto;
+    position: relative;
+}
+.sec2artistA > div > div{
+    position: absolute;
+    left: 0;
+    padding-left: 2rem;
+    padding-top: 1.3rem;
+}
+.sec2artistA > div > div :nth-child(1){
+    height: 2rem;
+}
+.sec2artistA > div > div :nth-child(2){
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.sec2artistA > div > img{
+    position: absolute;
+    right: 0;
+    height: 12vh;
+}
+
+.sec2artistB{
+    height: 12vh;
+}
+.sec2artistB > div{
+    width: 100vw;
+    max-width: 48rem;
+    margin: 0 auto;
+    position: relative;
+}
+.sec2artistB > div > div{
+    position: absolute;
+    right: 0;
+    text-align: right;
+    padding-right: 2rem;
+    padding-top: 1.3rem;
+}
+.sec2artistB > div > div :nth-child(1){
+    height: 2rem;
+}
+.sec2artistB > div > div :nth-child(2){
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.sec2artistB > div > img{
+    position: absolute;
+    left: 0;
+    height: 12vh;
+}
+
+#sec3{
+    margin-top: 10vh;
+}
+.container {
+    display: grid;
+    max-width: 48rem;
+	grid-template-columns: 1fr 1fr;
+    margin-bottom: 6vh;
+}
+
+.navButton{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    background: rgba(127, 154, 205, 0.1);
+    border: 1px solid #92AAFF;
+    border-radius: 16px;
+    color: #92AAFF;
+    width: 90%;
+    height: 100%;
+    padding-left: 10%;
+    padding-right: 8%;
+    cursor: pointer;
+}
+
+#sec3nav{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+
+#sec3nav :nth-child(1){
+    height: 50%;
+
+}
+
+#sec3nav :nth-child(2){
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 1vh;
+}
+
+.arrow{
+    position: absolute;
+    right: 5%;
+}
+
+.navButtonText{
+    text-align: left;
+}
+
+.arrow>Img{
+    width: 15px;
+}
