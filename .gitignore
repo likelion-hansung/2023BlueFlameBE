@@ -1,6 +1,6 @@
 # Created by https://www.toptal.com/developers/gitignore/api/macos,django,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,django,visualstudiocode
-./myvenv
+myvenv
 ./.vscode
 ### Django ###
 *.log
@@ -227,3 +227,4 @@ node_modules
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,django,visualstudiocode
+
