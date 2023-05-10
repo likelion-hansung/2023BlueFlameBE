@@ -25,5 +25,5 @@ DATABASES = {
 }
 
 STATIC_ROOT = [
-    BASE_DIR / 'static' 
+    BASE_DIR / 'static',
 ]
