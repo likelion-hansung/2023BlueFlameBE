@@ -1,6 +1,6 @@
 # Created by https://www.toptal.com/developers/gitignore/api/macos,django,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,django,visualstudiocode
-
+./myvenv
 ### Django ###
 *.log
 *.pot
@@ -219,7 +219,7 @@ Temporary Items
 
 # Built Visual Studio Code Extensions
 *.vsix
-
+node_modules
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
 .history
