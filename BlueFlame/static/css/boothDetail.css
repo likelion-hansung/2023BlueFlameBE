@@ -40,9 +40,14 @@ a {
     margiin-bottom:10px;
 }
 /* 동아리 일 때 */
-/* .club-info{
+.club-info{
     text-align: center;
-} */
+    width:335px;
+    margin-left:20px;
+    margin-right:20px;
+    margin-top: 10px;
+    margin-bottom:10px;
+}
 .track{
     font-weight: 500;
     font-size: 15px;
