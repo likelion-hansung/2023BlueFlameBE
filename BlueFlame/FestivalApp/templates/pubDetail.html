@@ -60,13 +60,20 @@
 
         <div class="menu">
             <div class="menu-title">메뉴</div>
-            {% for menu in pub.menu_set.all %}
-                <div class="menu-detail">
-                    <div class="menu-food">{{menu.name}}</div>
-                    <div class="menu-price">₩ {{menu.price}}</div>
-                </div>
-            {% endfor %}
+                <table style="border-collapse : collapse; border-spacing : 0">
+                    {% for menu in pub.menu_set.all %}
+                    <tr>
+                        <td style="text-align: left; margin-bottom: 8px; border-right: 20px; padding-right:20px">
+                            {{menu.name}}
+                        </td>
+                        <td style="text-align: left; margin-bottom: 8px; border-left: 1px solid #92AAFF; padding-left: 13px;">
+                            ₩ {{menu.price}}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
         </div>
+        
         <!-- 동아리 설명 -->
         <!-- <div class="club-info">
 
