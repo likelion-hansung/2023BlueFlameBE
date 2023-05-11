@@ -9,6 +9,10 @@ body{
     color: #92AAFF;
     font-family: 'Noto Sans KR', sans-serif;
 }
+
+a {
+    text-decoration-line: none;
+  }
 .boothDetail-container{
     background-color: #090B26;
     color: #92AAFF;
