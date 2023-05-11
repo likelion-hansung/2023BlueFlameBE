@@ -189,3 +189,12 @@ nav>#nav2{
 
     margin-bottom: 20px;
 }
+.inspired{
+    font-size: 8px;
+    color: #92AAFF;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #01001B;
+}
