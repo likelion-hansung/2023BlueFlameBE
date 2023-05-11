@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="{% static 'css/default.css' %}">
   <link rel="stylesheet" href="{% static 'css/timeline.css' %}">
   <title>TimeTable</title>
+  
 </head>
 
 <body>
@@ -278,18 +279,20 @@
       days.forEach((day) => {
         day.classList.remove("active");
       });
-
+      $()
       // 현재 클릭된 요일에 active 클래스 추가
       this.classList.add("active");
 
+      $("#timeline1").show();
       // 해당하는 컨텐츠를 표시하도록 함
       contents.forEach((content) => {
         content.style.display = "none";
       });
 
-      const dayContent = document.querySelector(`#${this.dataset.day}`);
-      dayContent.style.display = "block";
-
+      setTimeout(() => {
+  const dayContent = document.querySelector(`#${this.dataset.day}`);
+  dayContent.style.display = "block";
+}, 0);
     });
   });
 
