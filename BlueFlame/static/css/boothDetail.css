@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 *{
     padding: 0;
     margin: 0;
 }
 body{
+    
     background-color: #090B26;
     color: #92AAFF;
-    font-family: 'Pretendard';
+    font-family: 'Noto Sans KR', sans-serif;
 }
 .boothDetail-container{
     background-color: #090B26;
     color: #92AAFF;
-    font-family: 'Pretendard';
+    font-family: 'Noto Sans KR', sans-serif;
 
     display: flex;
     flex-direction: column;
@@ -28,6 +30,10 @@ body{
 }
 .booth-info{
     text-align: center;
+    width:335px;
+    height:80px;
+    margin-left:20px;
+    margin-right:20px;
 }
 /* 동아리 일 때 */
 /* .club-info{

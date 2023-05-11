@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 *{
     padding: 0;
     margin: 0;
 }
 body{
     background-color: #090B26; /*배경화면 색깔 바꿔야함*/
-    font-family: 'Pretendard';
+    font-family: 'Noto Sans KR', sans-serif;
     padding: 0;
     margin: 0;
     width: 100vw;
@@ -30,7 +31,7 @@ body{
 }
 
 nav>#nav1,#nav2{
-    font-size: 1em;
+    font-size: 16px;
     width: 50%;
     color: #92AAFF;
     border-bottom: 2px solid #92AAFF;
@@ -41,7 +42,7 @@ nav>#nav1,#nav2{
 
 nav>#nav2{
     color:#3A4DEE;
-    border-bottom: 2px solid #3A4DEE;
+    border-bottom: 1px solid #3A4DEE;
 }
 
 /* 멋쟁이 사자처럼 페이지 */
@@ -82,7 +83,7 @@ nav>#nav2{
 
     color: #090B26;
     text-align: center;
-    font-size: 0.875rem;
+    font-size: 14px;
     font-weight: 700;
     line-height: 160%;
 
@@ -187,4 +188,13 @@ nav>#nav2{
     text-align: center;
 
     margin-bottom: 20px;
+}
+.inspired{
+    font-size: 8px;
+    color: #92AAFF;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #01001B;
 }
