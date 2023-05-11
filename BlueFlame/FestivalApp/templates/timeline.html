@@ -15,10 +15,10 @@
   <link rel="stylesheet" href="{% static 'css/default.css' %}">
   <link rel="stylesheet" href="{% static 'css/timeline.css' %}">
   <title>TimeTable</title>
-  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
-<body>
+<body onload="click1()">
   <nav class="navbar fixed-top">
     <a href="{% url 'home' %}"><img src="{% static 'img/LogoText.png' %}"" style="margin-top: 15px; margin-left: 10%; width: 100px;"></a>
         
@@ -54,15 +54,15 @@
 </nav>
 <!-- menu bar -->
 <div class="grid text-center" style="display: flex; margin-top: 50px;">
-  <div class="g-col-4" style="width: 33.33%;" data-day="timeline1">
+  <div class="g-col-4" id="one"onclick="click1()" style="width: 33.33%;" data-day="timeline1">
     <div class="ex-day">
       Day 1
     </div>
-    <div class="ex-date">
+    <div class="ex-date" style="padding-bottom: 8px;">
       05.10
     </div>
   </div>
-  <div class="g-col-4" style="width: 33.33%;" data-day="timeline2">
+  <div class="g-col-4" id="two"onclick="click2()" style="width: 33.33%;" data-day="timeline2">
     <div class="ex-day">
       Day 2
     </div>
@@ -70,7 +70,7 @@
       05.11
     </div>
   </div>
-  <div class="g-col-4" style="width: 33.33%;" data-day="timeline3">
+  <div class="g-col-4" id="three"onclick="click3()" style="width: 33.33%;" data-day="timeline3">
     <div class="ex-day">
       Day 3
     </div>
@@ -85,7 +85,6 @@
     <!--day1-->
     <ul id="timeline1" class="day-content">
       <li class="darkblue">
-        <span></span>
         <div>
           <div class="title">총학생회 이벤트 '이음 노래방'</div>
           <div class="info2">잔디광장 앞 무대</div>
@@ -143,7 +142,7 @@
     <!--day2-->
     <ul id="timeline2" class="day-content" style="display: none;">
       <li class="darkblue">
-        <span></span>
+        <!-- <span></span> -->
         <div>
           <div class="title">낙산가요제</div>
           <div class="info2">잔디광장 앞 무대</div>
@@ -193,7 +192,7 @@
     <!--day3-->
     <ul id="timeline3" class="day-content" style="display: none;">
       <li class="blue">
-        <span></span>
+        <!-- <span></span> -->
         <div>
           <div class="title">동아리공연</div>
           <div class="info">탈패</div>
@@ -261,40 +260,74 @@
 </footer>
 
 <script>
-  // 요일 클릭 이벤트 처리
-  const grid = document.querySelector(".grid");
-  const days = grid.querySelectorAll(".g-col-4");
-  const contents = document.querySelectorAll(".day-content");
+  // // 요일 클릭 이벤트 처리
+  // const grid = document.querySelector(".grid");
+  // const days = grid.querySelectorAll(".g-col-4");
+  // const contents = document.querySelectorAll(".day-content");
 
-  // 첫 번째 요일에 active 클래스 추가
-  days[0].classList.add("active");
+  // // 첫 번째 요일에 active 클래스 추가
+  // days[0].classList.add("active");
 
-  // dayContent 변수에 첫 번째 요일 콘텐츠를 할당
-  const dayContent = document.querySelector("#timeline1");
-  dayContent.style.display = "block";
+  // // dayContent 변수에 첫 번째 요일 콘텐츠를 할당
+  // const dayContent = document.querySelector("#timeline1");
+  // dayContent.style.display = "block";
 
-  days.forEach((day) => {
-    day.addEventListener("click", function () {
-      // 모든 요일에서 active 클래스를 제거
-      days.forEach((day) => {
-        day.classList.remove("active");
-      });
-      $()
-      // 현재 클릭된 요일에 active 클래스 추가
-      this.classList.add("active");
+  // days.forEach((day) => {
+  //   day.addEventListener("click", function () {
+  //     // 모든 요일에서 active 클래스를 제거
+  //     days.forEach((day) => {
+  //       day.classList.remove("active");
+  //     });
+  //     $()
+  //     // 현재 클릭된 요일에 active 클래스 추가
+  //     this.classList.add("active");
 
-      $("#timeline1").show();
-      // 해당하는 컨텐츠를 표시하도록 함
-      contents.forEach((content) => {
-        content.style.display = "none";
-      });
+  //     $("#timeline1").show();
+  //     // 해당하는 컨텐츠를 표시하도록 함
+  //     contents.forEach((content) => {
+  //       content.style.display = "none";
+  //     });
 
-      setTimeout(() => {
-  const dayContent = document.querySelector(`#${this.dataset.day}`);
-  dayContent.style.display = "block";
-}, 0);
-    });
-  });
+  //     const dayContent = document.querySelector(`#${this.dataset.day}`);
+  //     dayContent.style.display = "block";
+  // });
+  function click1(){
+    $("#timeline1").show();
+    $("#timeline2").hide();
+    $("#timeline3").hide();
+
+    $("#two").css("color","#3A4DEE");
+    $("#two").css("border-bottom","2px solid #3A4DEE");
+    $("#three").css("color","#3A4DEE");
+    $("#three").css("border-bottom","2px solid #3A4DEE");
+    $("#one").css("color","#92AAFF");
+    $("#one").css("border-bottom","2px solid #92AAFF");
+  }
+  function click2(){
+    console.log("2");
+    $("#timeline2").show();
+    $("#timeline1").hide();
+    $("#timeline3").hide();
+
+    $("#one").css("color","#3A4DEE");
+    $("#one").css("border-bottom","2px solid #3A4DEE");
+    $("#three").css("color","#3A4DEE");
+    $("#three").css("border-bottom","2px solid #3A4DEE");
+    $("#two").css("color","#92AAFF");
+    $("#two").css("border-bottom","2px solid #92AAFF");
+  }
+  function click3(){
+    $("#timeline3").show();
+    $("#timeline1").hide();
+    $("#timeline2").hide();
+
+    $("#two").css("color","#3A4DEE");
+    $("#two").css("border-bottom","2px solid #3A4DEE");
+    $("#one").css("color","#3A4DEE");
+    $("#one").css("border-bottom","2px solid #3A4DEE");
+    $("#three").css("color","#92AAFF");
+    $("#three").css("border-bottom","2px solid #92AAFF");
+  }
 
 </script>
 

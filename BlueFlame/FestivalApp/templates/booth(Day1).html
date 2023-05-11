@@ -15,7 +15,7 @@
 
 <body onload="first1()">
     <nav class="navbar fixed-top">
-        <a href="{% url 'home' %}"><img src="{% static 'img/LogoText.png' %}"" style="margin-top: 15px; margin-left: 10%; width: 100px;"></a>
+            <a href="{% url 'home' %}"><img src="{% static 'img/LogoText.png' %}"" style="margin-top: 15px; margin-left: 10%; width: 100px;"></a>
         
         <input type="checkbox" id="icon">
     <label for="icon" style="margin-right: 10%;">   <!--label은 인라인 스타일-->
@@ -51,19 +51,19 @@
         <div id="first-tap1" onclick="first1()">
             <span id="first-time">Day 1</span>
             <br>
-            <span id="day1-info">05.10</span>
+            <span id="day1-info" style="padding-bottom: 8px;">05.10</span>
         </div>
 
         <div id="first-tap2" onclick="location.href='{% url 'booth' 1 %}'">
             <span id="second-time">Day 2</span>
             <br>
-            <span id="day2-info">05.11</span>
+            <span id="day2-info" style="padding-bottom: 8px;">05.11</span>
         </div>
 
         <div id="first-tap3" onclick="location.href='{% url 'booth' 2 %}'">
             <span id="third-time">Day 3</span>
             <br>
-            <span id="day3-info">05.12</span>
+            <span id="day3-info" style="padding-bottom: 8px;">05.12</span>
         </div>
     </nav>
 
